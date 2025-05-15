@@ -15,7 +15,7 @@ Este repositorio contiene la **aplicación web** de ColAlly. Proporciona la inte
 ## 🚀 Inicio rápido
 
 ```bash
-git clone https://github.com/tu-usuario/colally-frontend.git
+git clone https://github.com/jcgmU/colally-frontend.git
 cd colally-frontend
 npm install
 docker compose up -d   # (si no está levantado desde backend)
