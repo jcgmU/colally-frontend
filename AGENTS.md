@@ -2,93 +2,48 @@
 
 # Propósito
 
-Este repositorio contiene la aplicación web SSR de ColAlly. Aquí se implementan las vistas, lógica de interacción, animaciones, dashboards y conectividad con GraphQL.
+Aplicación web SSR con Next.js, siguiendo Atomic Design y buenas prácticas de accesibilidad.
 
 # Arquitectura
 
-- Atomic Design
-- SSR con App Router (Next.js 15)
-- Accesibilidad y movilidad como prioridad
-- Tipado estricto + tests en cada componente
-- Estados desacoplados y persistentes vía Zustand o Context
+- Next.js 15 + React 19 (App Router)
+- TypeScript estricto
+- TailwindCSS + shadcn/ui
+- Estado global vía Zustand o Context
+- Vitest + RTL para pruebas
+- Husky y commitlint para garantizar calidad
 
 # Estructura de carpetas
 
 ```
 src/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── login/
-│       └── page.test.tsx
+├── app/             # rutas Next.js
 ├── components/
 │   ├── atoms/
 │   ├── molecules/
 │   ├── organisms/
 │   ├── templates/
-│   └── ui/           # shadcn components
+│   └── ui/
 ├── context/
-│   ├── user-context.tsx
-│   └── theme-context.tsx
 ├── hooks/
-│   ├── useAuth.ts
-│   ├── useProjectFilter.ts
-│   └── useTaskStatus.ts
 ├── services/
-│   └── apollo.ts     # Apollo Client config
 ├── styles/
-│   └── globals.css
 ├── lib/
-│   └── utils.ts
-├── tests/
-│   ├── components/
-│   └── e2e/
+└── tests/
 ```
-
-# Stack
-
-- Next.js 15 (App Router)
-- TypeScript
-- TailwindCSS + shadcn/ui
-- Apollo Client + GraphQL Code Generator
-- Zustand + Context API
-- RTL + Vitest
-- Framer Motion / GSAP
-- Firebase Cloud Messaging + Socket.io-client
 
 # Reglas de implementación
 
-- Cada componente nuevo debe estar:
+- Todo componente debe estar tipado y probado con React Testing Library.
+- Mantener accesibilidad (`aria-*`, navegación por teclado).
+- No acoplar lógica de negocio en componentes visuales.
+- Documentar hooks e interfaces.
+- Seguir convenciones de commits y ramas descritas en `CONTRIBUTING.md`.
 
-  - Tipado
-  - Probado con RTL
-  - Accesible (`aria-*`, foco, keyboard)
+# Tooling
 
-- No se permite lógica directa en los componentes visuales.
-- Hooks y servicios deben vivir fuera de los templates.
-- Animaciones deben ser suaves y no bloquear la UI.
+- ESLint + Prettier integrados (import/order, hooks, a11y).
+- Husky ejecuta `npm run lint` y `npm run test` en cada commit.
+- commitlint valida mensajes de commit.
 
-# Instrucciones para Codex y agentes
-
-1. Seguir esta estructura siempre.
-2. Crear componentes reutilizables si hay duplicación.
-3. Si se modifica una página, también actualizar sus pruebas.
-4. Hooks deben tener nombres autoexplicativos y estar documentados.
-5. Preferir `server-actions` o SSR en rutas críticas.
-
-# No permitido
-
-- Código sin tipado
-- Componentes sin prueba ni accesibilidad
-- Hooks duplicados o con side-effects no controlados
-- Llamadas directas a la API desde el componente
-
-# Entregables mínimos por tarea
-
-- Componentes funcionales, accesibles y tipados
-- Hooks documentados y reutilizables
-- PR estructurado, validado y con pruebas
-
-```
-
-```
+Cumplir con estas pautas asegura coherencia y calidad en el código.

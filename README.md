@@ -1,59 +1,38 @@
-# ColAlly – Frontend (Web Client)
+# ColAlly – Frontend
 
-Este repositorio contiene la **aplicación web** de ColAlly. Proporciona la interfaz de usuario para gestionar proyectos, tareas y reportes.
+Aplicación web SSR de ColAlly construida con **Next.js 15** y **TypeScript**. Incluye TailwindCSS y componentes shadcn/ui para un desarrollo rápido y coherente.
 
-## 🖥️ Tecnologías principales
-
-- **Next.js** (React 18)
-- **TypeScript**
-- **TailwindCSS** (UI)
-- **Apollo Client** (GraphQL)
-- **Framer Motion / GSAP** (Animaciones)
-- **Socket.io‑client** (Tiempo real)
-- **Docker Compose** (para entorno unificado)
-
-## 🚀 Inicio rápido
+## 🚀 Puesta en marcha
 
 ```bash
-git clone https://github.com/jcgmU/colally-frontend.git
-cd colally-frontend
 npm install
-docker compose up -d   # (si no está levantado desde backend)
 npm run dev
 ```
 
-La aplicación se abre en `http://localhost:3000`.
+La aplicación estará disponible en `http://localhost:3000`.
 
-## 📂 Estructura de carpetas clave
-```
-src/
-├── app/
-├── components/
-├── context/
-├── hooks/
-├── services/
-├── styles/
-├── lib/
-└── tests/
+### Lint y pruebas
+
+```bash
+npm run lint
+npm run test
 ```
 
-## 🔑 Convención de commits
+### Flujo de trabajo
 
-`feat(ui): add Kanban drag and drop`
+1. Crea ramas siguiendo las [convenciones de CONTRIBUTING](./CONTRIBUTING.md).
+2. Abre Pull Requests descriptivas contra `dev`.
+3. Husky ejecutará `lint` y `test` antes de cada commit.
 
-Tipos: feat, fix, docs, style, refactor, test, chore.
+## 📂 Carpetas principales
 
-## 📝 Branch naming
+- **src/app** – rutas y páginas de Next.js (App Router).
+- **src/components** – componentes UI siguiendo Atomic Design (`atoms`, `molecules`, `organisms`, `templates`, `ui`).
+- **src/context** – contextos de React (estado global).
+- **src/hooks** – hooks reutilizables.
+- **src/services** – clientes o integraciones externas (p.ej. Apollo).
+- **src/styles** – estilos globales y configuraciones de Tailwind.
+- **src/lib** – utilidades compartidas.
+- **src/tests** – pruebas de componentes y e2e.
 
-- `feature/<nombre>`
-- `bugfix/<nombre>`
-- `hotfix/<nombre>`
-- `chore/<nombre>`
-
----
-
-## Contacto
-
-📧 jcgm1047@gmail.com  
-👨🏻‍💻 Juan Camilo Garcia Martin  
-🚀 Desarrollado con ❤️ usando **Next.js y WebSocket**
+Consulta `AGENTS.md` para más detalles sobre reglas y estructura.

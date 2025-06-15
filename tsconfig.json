@@ -13,7 +13,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": ["@types/node", "@types/react", "@types/react-dom", "vitest/globals"],
+    "types": [
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "vitest/globals"
+    ],
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
@@ -21,7 +26,7 @@
       "@context/*": ["src/context/*"],
       "@services/*": ["src/services/*"],
       "@/*": ["src/*"],
-      "@lib/*": ["src/lib/*"],
+      "@lib/*": ["src/lib/*"]
     }
   },
   "include": ["next-env.d.ts", "src/**/*"],
