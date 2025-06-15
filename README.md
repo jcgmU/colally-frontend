@@ -25,14 +25,16 @@ npm run dev
 La aplicación se abre en `http://localhost:3000`.
 
 ## 📂 Estructura de carpetas clave
-
 ```
-components/   # Atoms, Molecules, Organisms
-pages/        # Rutas Next.js
-layouts/      # Navbar, Sidebar
-context/      # Global state (Context API)
-services/     # Apollo Client
-styles/       # Tailwind config
+src/
+├── app/
+├── components/
+├── context/
+├── hooks/
+├── services/
+├── styles/
+├── lib/
+└── tests/
 ```
 
 ## 🔑 Convención de commits
