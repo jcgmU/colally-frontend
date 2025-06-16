@@ -25,6 +25,7 @@ npm run dev
 La aplicación se abre en `http://localhost:3000`.
 
 ## 📂 Estructura de carpetas clave
+
 ```
 src/
 ├── app/
